@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,18 +8,28 @@
 </head>
 <body>
     <h1>Треугольник Серпинского</h1>
-    
-    <div class="controls">
-        <label for="depth">Глубина рекурсии:</label>
-        <input id="depth" type="number" min="0" max="10" value="0">
+    <p class="subtitle">Интерактивная генерация фрактального треугольника</p>
+
+    <div class="container">
+        <div class="canvas-wrapper">
+            <canvas id="canvas" width="600" height="600"></canvas>
+        </div>
         
-        <label for="color">Цвет:</label>
-        <input id="color" type="color" value="#3a86ff">
-        
-        <button id="draw">Нарисовать</button>
+        <div class="controls">
+            <fieldset>
+                <legend>Параметры</legend>
+                <div class="input-group">
+                    <label for="depth">Глубина рекурсии:</label>
+                    <input id="depth" type="number" min="0" max="10" value="0">
+                </div>
+                <div class="input-group">
+                    <label for="color">Цвет:</label>
+                    <input id="color" type="color" value="#3a86ff">
+                </div>
+                <button id="draw">Нарисовать</button>
+            </fieldset>
+        </div>
     </div>
-    
-    <canvas id="canvas" width="600" height="600"></canvas>
     
     <script src="js/script.js"></script>
 </body>
